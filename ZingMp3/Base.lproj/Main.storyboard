@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZingMp3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="CAZ-XZ-awa">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zing Mp3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJJ-4p-pw0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zud-Kd-yAz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.95511309849799853" blue="0.73958545367786221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngo Duy Huan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8j-Aw-tSW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WGb-t8-Q6Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" red="1" green="0.95511309849799853" blue="0.73958545367786221" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H8j-Aw-tSW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="G4k-xy-cfj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CAZ-XZ-awa" secondAttribute="bottom" id="QHq-Es-x2l"/>
+                            <constraint firstAttribute="trailing" secondItem="H8j-Aw-tSW" secondAttribute="trailing" id="QPZ-MF-Umr"/>
+                            <constraint firstAttribute="trailing" secondItem="EJJ-4p-pw0" secondAttribute="trailing" id="Ums-Wy-xki"/>
+                            <constraint firstItem="CAZ-XZ-awa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ZNd-Iv-fPQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CAZ-XZ-awa" secondAttribute="trailing" constant="-20" id="ZP2-BL-ZDQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EJJ-4p-pw0" secondAttribute="bottom" id="dsg-Xx-2Ef"/>
+                            <constraint firstItem="EJJ-4p-pw0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="r1M-DS-P4u"/>
+                            <constraint firstItem="CAZ-XZ-awa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tou-yx-sHW"/>
+                            <constraint firstItem="H8j-Aw-tSW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zE9-Bz-pyu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imgLogo" destination="CAZ-XZ-awa" id="RMV-hc-1V8"/>
+                        <outlet property="lblName" destination="H8j-Aw-tSW" id="1Io-Py-tfE"/>
+                        <outlet property="lblText" destination="EJJ-4p-pw0" id="e6Q-t0-GQG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="73" y="41"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo.jpg" width="900" height="900"/>
+    </resources>
 </document>
