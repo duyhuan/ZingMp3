@@ -1,1 +1,1 @@
-ZingMp3
+ZingMp3 written by Ngo Day Huan
